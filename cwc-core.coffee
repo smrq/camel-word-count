@@ -2,7 +2,7 @@ fs = require 'fs'
 _ = require 'underscore'
 
 exports = module.exports = (files) ->
-	regex = /\b([A-Za-z][a-z]*)|(?![a-z0-9])([A-Z][a-z]*)|[A-Z]+(?![a-z])/g
+	regex = /[A-Z]+(?![a-z])|\b([A-Za-z][a-z]*)|(?![a-z0-9])([A-Z][a-z]+)/g
 	fileCounts = (for filename in files
 		contents = fs.readFileSync(filename).toString()
 		words = contents.match regex
