@@ -1,0 +1,10 @@
+{
+  "name": "camel-word-count",
+  "version": "0.1.0",
+  "dependencies": {
+    "glob": "*",
+    "optimist": "*",
+    "printf": "*",
+    "underscore": "*"
+  }
+}
